@@ -1,0 +1,15 @@
+import pyautogui as p
+from time import sleep
+for i in range(3):
+    print(i, end='\t')
+    print("mouse position: ", p.position())
+    try:
+        x, y = p.locateCenterOnScreen("buildup.png", grayscale=True)
+        print("hand find")
+        p.moveTo(x, y, 1)
+        print("mouse move to point", x, y)
+        p.click(interval=0.1)
+        sleep(0.5)
+        p.click(interval=0.1)
+    except:
+        print("not find")
