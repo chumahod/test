@@ -1,3 +1,9 @@
+'''todo
+[]  add vip chest open
+[]  add send rss to bank
+[]  change def shelter
+[]  change path method
+'''
 import pyautogui as p
 import os
 import time
