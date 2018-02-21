@@ -1,4 +1,12 @@
+todo
 []  add vip chest open
+        добавить выполнение вип задания
 []  add send rss to bank
+        добавить отправку ресурсов
 []  change def shelter
-[]  change path method
+        переписать функцию shelter
+[]  !change path method
+        изменить пути на относительные
+        (сейчас абсолютные не работает если скрипты в разных каталогах)
+[]  change bot list to file
+        настроить работу с ботами через файл. чтобы не хардкодить имена
