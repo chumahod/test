@@ -26,53 +26,23 @@ def closeBtn():
             time.sleep(2)
     logging.info("closeBtn finish")
 
-def shelterIn():
-    logging.info("shelterIn start")
-    p.moveTo(456, 350, 1)
-    p.click(interval=0.3)
-    p.moveTo(443, 396, 1)
-    p.click(interval=0.3)
-    p.moveTo(609, 407, 1)
-    p.click(interval=0.3)
-    time.sleep(3)
-    if p.locateCenterOnScreen("c:/lod/img/close/close1.png"):
-        closeBtn()
-        time.sleep(2)
-        if p.locateCenterOnScreen("c:/lod/img/close/close2.png"):
-            x, y = p.locateCenterOnScreen("c:/lod/img/close/close1.png")
-            p.moveTo(x, y, 1)
-            p.click()
-            time.sleep(1)
-    logging.info("shelterIn finish")
-
-def shelterOut():
-    logging.info("shelterOut start")
-    p.moveTo(445, 79, 1)
-    p.click(interval=0.3)
-    p.moveTo(594, 162, 1)
-    p.click(interval=0.3)
-    logging.info("shelterOut finish")
-
-def shelter():
-    logging.info("shelter start")
-    os.chdir('c:/lod/img/shelter')
-    p.moveTo(445, 79, 1)
+def questBtn():
+    logging.info("questBtn start")
+    p.moveTo(491, 465, 1)
     p.click(interval=0.3)
     time.sleep(1)
-    coord = p.locateCenterOnScreen("sh.png", grayscale=True)
-    if coord:
-        logging.info("find")
-        shelterIn()
-    else:
-        logging.info("not find")
-        shelterOut()
-        time.sleep(2)
-        p.moveTo(445, 79, 1)
-        p.click(interval=0.3)
-        time.sleep(1)
-        shelterIn()
-    time.sleep(2)
-    logging.info("shelter finish")
+    logging.info("questBtn finish")
+
+def adminQuest():
+    ''' открываем квесты дня '''
+    logging.info("adminQuest start")
+    questBtn()
+    p.moveTo(362, 122, 1)
+    p.click(interval=0.3)
+    time.sleep(1)
+    questChest()
+    closeBtn()
+    logging.info("adminQuest finish")
 
 if __name__ == '__main__':
     time.sleep(2)
