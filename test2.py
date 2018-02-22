@@ -139,12 +139,14 @@ def questChest():
 
 if __name__ == '__main__':
     time.sleep(6)
-    noxStart()
+    vipChestOpen()
+    '''noxStart()
     accounts = ["js_trump", "brouk_baraka", "gam_balin"]
     for i in range(1):
         for account in accounts:
             lmStart()
             noxMove()
+'''
         logging.info("wait 60 min")
         time.sleep(3600)
     logging.info("well done")
