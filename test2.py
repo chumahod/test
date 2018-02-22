@@ -147,8 +147,8 @@ if __name__ == '__main__':
             lmStart()
             noxMove()
 '''
-        logging.info("wait 60 min")
-        time.sleep(3600)
+    logging.info("wait 60 min")
+    time.sleep(3600)
     logging.info("well done")
 
 
