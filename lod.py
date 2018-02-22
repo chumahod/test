@@ -141,6 +141,7 @@ def huntChest():
     logging.info("huntChestOpen finish")
 
 def chestOpen():
+    '''открываем тайнственные коробки'''
     logging.info("chestOpen start")
     p.moveTo(686, 387, 1)
     p.click()
