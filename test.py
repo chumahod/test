@@ -33,7 +33,7 @@ def questBtn():
     time.sleep(1)
     logging.info("questBtn finish")
 
-def adminQuest():
+def vipQuest():
     ''' открываем квесты дня '''
     logging.info("adminQuest start")
     questBtn()
