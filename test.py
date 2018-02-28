@@ -26,23 +26,12 @@ def closeBtn():
             time.sleep(2)
     logging.info("closeBtn finish")
 
-def questBtn():
-    logging.info("questBtn start")
-    p.moveTo(491, 465, 1)
-    p.click(interval=0.3)
-    time.sleep(1)
-    logging.info("questBtn finish")
+def sendRss():
+    pass
 
-def vipQuest():
-    ''' открываем квесты дня '''
-    logging.info("adminQuest start")
-    questBtn()
-    p.moveTo(362, 122, 1)
-    p.click(interval=0.3)
-    time.sleep(1)
-    questChest()
-    closeBtn()
-    logging.info("adminQuest finish")
+def onMap():
+
+def onCastle():
 
 if __name__ == '__main__':
     time.sleep(2)

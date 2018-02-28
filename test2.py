@@ -27,7 +27,7 @@ def noxStart():
 def noxMove():
     ''' перемещаем nox в угол экрана'''
     logging.info("noxMove start")
-    os.chdir('c:/lod/img/nox')
+    os.chdir('img/nox')
     try:
         x, y = p.locateCenterOnScreen("nox_window.png", grayscale=True)
     except:
@@ -44,7 +44,7 @@ def noxMove():
 def lmStart():
     ''' Запускаем LM'''
     logging.info("lmStart start")
-    os.chdir('c:/lod/img/lm')
+    os.chdir('img/lm')
     try:
         x, y = p.locateCenterOnScreen("lm_start.png", grayscale=True)
     except:
@@ -65,8 +65,8 @@ def lmStart():
 def closeBtn():
     """ Нажимаем кнопку закрыть """
     logging.info("closeBtn start")
-    os.chdir('c:/lod/img/close')
-    l = os.listdir('c:/lod/img/close')
+    os.chdir('img/close')
+    l = os.listdir('img/close')
     for pic in l:
         try:
             x, y = p.locateCenterOnScreen(pic, grayscale=True)
@@ -170,11 +170,3 @@ if __name__ == '__main__':
     time.sleep(3600)
     logging.info("well done")
 
-
-
-(240, 285)
-(388, 265)
-(566, 258)
-(227, 368)
-(391, 371)
-(580, 369)
