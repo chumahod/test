@@ -11,11 +11,11 @@ logging.basicConfig(
 def closeBtn():
     """ Нажимаем кнопку закрыть """
     logging.info("closeBtn start")
-    os.chdir('c:/lod/img/close')
-    l = os.listdir('c:/lod/img/close')
+    os.chdir('img/close')
+    l = os.listdir('img/close')
     for pic in l:
         try:
-            x, y = p.locateCenterOnScreen(pic, grayscale=True)
+            x, y = p.locateCenterOnScreen(pic, grayscale=True, region=(0,0, 800, 490))
         except:
             logging.info("close btn not find")
         else:
@@ -27,11 +27,14 @@ def closeBtn():
     logging.info("closeBtn finish")
 
 def sendRss():
+    # отправляем ресы
     pass
 
 def onMap():
+    # переключаемся на карту
 
 def onCastle():
+    # переключаемся в замок
 
 if __name__ == '__main__':
     time.sleep(2)

@@ -169,4 +169,3 @@ if __name__ == '__main__':
     logging.info("wait 60 min")
     time.sleep(3600)
     logging.info("well done")
-
