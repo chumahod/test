@@ -324,10 +324,10 @@ def changeAcc(twink):
                         time.sleep(3)
 
 if __name__ == '__main__':
-    time.sleep(60)
+    time.sleep(6)
     noxStart()
     accounts = ["js_trump", "brouk_baraka", "gam_balin"]
-    for i in range(24):
+    for i in range(240):
         for account in accounts:
             lmStart()
             noxMove()
@@ -340,8 +340,9 @@ if __name__ == '__main__':
             vipChestOpen()
             chestOpen()
             changeAcc(account)
+
         logging.info("wait 60 min")
-        time.sleep(3600)
+        time.sleep(60)
     logging.info("well done")
 
 
