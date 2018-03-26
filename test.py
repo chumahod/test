@@ -34,20 +34,24 @@ def sendRss():
 
 def onMap():
     # переключаемся на карту
-
+    pass
 def onCastle():
     # переключаемся в замок
+    pass
 
 def shieldEnable():
-    if !(p.locateOnScreen("shield.png", region(750, 160, 0, 0)), grayscale=True):
-        # запускаем щит
+    logging.info("shieldEnable start")
+    if (p.locateOnScreen("shield.png")):
+        print(' щит')
+
     else:
-        loggin.info("shield enable")
+        logging.info("shield disable")
+        # запускаем щит
 
 if __name__ == '__main__':
     time.sleep(2)
     for i in range(2):
-        shelter()
+        shieldEnable()
         print("wait ", t_wait, " sec")
         print("wait ", t_wait/60, " min")
         time.sleep(t_wait)
