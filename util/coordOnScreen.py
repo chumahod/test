@@ -6,4 +6,3 @@ import time
 for i in range(6):
     print(p.position())
     time.sleep(2)
-    print("]9{V2ZQmG3")
