@@ -244,7 +244,6 @@ def shelterOut():
     p.click(interval=0.3)
     p.moveTo(594, 162, 2)
     p.click(interval=0.3)
-    time.sleep(2)
     logging.info("shelterOut finish")
 
 def shelter():
@@ -335,8 +334,10 @@ def shieldEnable():
     p.click(interval=0.2)
     time.sleep(2)
     if (p.locateCenterOnScreen("turfBoostsWindow.png")):
+        logging.info("turfBoostsWindow find")
         x, y = p.locateCenterOnScreen("turfBoostsWindow.png", grayscale=True)
         if (p.locateCenterOnScreen("turfBoostsShieldIcon.png")):
+            logging.info("turfBoostsShieldIcon find")
             x, y = p.locateCenterOnScreen("turfBoostsShieldIcon.png", grayscale=True)
             p.moveTo(624, y, 1)
             p.click(interval=0.2)
@@ -352,7 +353,7 @@ def shieldEnable():
         else:
             p.press('esc')
             time.sleep(2)
-            return print('shield enable')
+            return print('shield enabled')
 
     else:
         p.press('esc')
@@ -360,23 +361,23 @@ def shieldEnable():
         return print('turfBoostsWindow not find')
 
 if __name__ == '__main__':
-    time.sleep(10)
-    noxStart()
+#    time.sleep(10)
+#    noxStart()
     accounts = ["js_trump", "brouk_baraka", "gam_balin"]
     for i in range(24000):
         for account in accounts:
-            lmStart()
-            noxMove()
+#            lmStart()
+ #           noxMove()
             shieldEnable()
-            chestOpen()
-            shelter()
-            helpGuild()
-            huntChest()
-            adminQuest()
-            guildQuest()
-            vipChestOpen()
-            chestOpen()
-            changeAcc(account)
+  #          chestOpen()
+   #         shelter()
+    #        helpGuild()
+     #       huntChest()
+      #      adminQuest()
+       #     guildQuest()
+        #    vipChestOpen()
+         #   chestOpen()
+          #  changeAcc(account)
 
         logging.info("wait 60 min")
         time.sleep(60)
